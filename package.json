@@ -1,0 +1,33 @@
+{
+  "name": "expensave-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serverless offline start --printOutput",
+    "start": "sls deploy --aws-profile serverlessAdmin",
+    "version": "auto-changelog --template changelog-template.hbs -p && git add CHANGELOG.md"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi-date": "^2.0.1",
+    "cors": "^2.8.5",
+    "dynamoose": "^2.4.1",
+    "express": "^4.17.1",
+    "joi": "^17.2.1",
+    "serverless-http": "^2.6.0"
+  },
+  "devDependencies": {
+    "auto-changelog": "^2.2.1",
+    "serverless-offline": "^6.8.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
+  }
+}
