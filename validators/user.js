@@ -5,9 +5,10 @@ const Joi = JoiBase.extend(JoiDate);
 
 const signUp = async (req, res, next) => {
   const bodySchema = Joi.object({
-    firstName: Joi.string().empty(''),
-    lastName: Joi.string().empty(''),
-    email: Joi.string().email().empty(''),
+    firstName: Joi.string().required(),
+    lastName: Joi.string().required(),
+    email: Joi.string().email().required(),
+    password: Joi.string().min(8).required(),
   });
 
   try {

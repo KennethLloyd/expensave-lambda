@@ -4,12 +4,12 @@ const userSchema = new dynamoose.Schema(
   {
     firstName: {
       type: String,
-      required: false,
+      required: true,
       trim: true,
     },
     lastName: {
       type: String,
-      required: false,
+      required: true,
       trim: true,
     },
     email: {

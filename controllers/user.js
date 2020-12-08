@@ -1,12 +1,17 @@
+const cognito = require('../lib/cognito');
+
 const signUp = async (req, res) => {
-  const { firstName, lastName, email } = req.body;
-
-  console.log(email);
-
   try {
-    return res.send({ message: 'Yes!' });
+    const { firstName, lastName, email, password } = req.body;
+
+    const response = await cognito.signUp(email, password);
+
+    return res.send({ message: 'Successfully registered' });
   } catch (e) {
-    console.log(e);
+    if (e.status) {
+      return res.status(e.status).send({ error: e.message });
+    }
+
     return res.status(500).send({ error: 'Internal Server Error' });
   }
 };
