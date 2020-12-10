@@ -2,6 +2,10 @@ const dynamoose = require('dynamoose');
 
 const userSchema = new dynamoose.Schema(
   {
+    id: {
+      type: String,
+      required: true,
+    },
     firstName: {
       type: String,
       required: true,
@@ -24,13 +28,6 @@ const userSchema = new dynamoose.Schema(
     timestamps: true,
   },
 );
-
-userSchema.methods.toJSON = function () {
-  const user = this;
-  const userObject = user.toObject(); // get raw data
-
-  return userObject;
-};
 
 const User = dynamoose.model('User', userSchema);
 

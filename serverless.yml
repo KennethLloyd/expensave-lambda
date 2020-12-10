@@ -3,12 +3,13 @@ useDotenv: true
 
 plugins:
   - serverless-offline
+  - serverless-dotenv-plugin
 
 provider:
   name: aws
   runtime: nodejs12.x
   stage: dev
-  region: ap-southeast-1
+  region: ${env:MY_AWS_REGION}
   apiGateway:
     shouldStartNameWithService: true
 

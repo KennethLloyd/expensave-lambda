@@ -20,17 +20,19 @@
     "express": "^4.17.1",
     "joi": "^17.2.1",
     "jwt-decode": "^3.1.2",
-    "serverless-http": "^2.6.0"
+    "serverless-http": "^2.6.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "auto-changelog": "^2.2.1",
-    "serverless-offline": "^6.8.0",
     "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "serverless-dotenv-plugin": "^3.1.0",
+    "serverless-offline": "^6.8.0"
   }
 }
